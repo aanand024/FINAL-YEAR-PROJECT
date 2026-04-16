@@ -307,7 +307,6 @@ def run_workflow(
             val_mae = float(mean_absolute_error(y_val10, y_hat))
             best_model_name = best_est.named_steps["model"].__class__.__name__
 
-            #check names!!!!!
             fold_records.append({
                 "repeat": rep,
                 "split": split_i,
@@ -416,8 +415,7 @@ def run_workflow(
 
 
 if __name__ == "__main__":
-    CSV_PATH = "surrogate_models/data/LATEST/merged_for_regression.csv"
-    # CSV_PATH = "surrogate_models/data/LATEST_all_data_merged_for_regression.csv"
+    CSV_PATH = "2_Surrogate_Modelling/data/LATEST_all_data_merged_for_regression.csv"
 
     df, X_raw, y, emb1_slice, emb2_slice, scalar_slice = load_and_build_raw_features(CSV_PATH)
 
@@ -432,5 +430,5 @@ if __name__ == "__main__":
         scalar_slice=scalar_slice,
         n_repeats=10,
         n_val_splits=5,
-        csv_out_prefix="NEW_withoutxdata_nestedcv_surrogate",
+        csv_out_prefix="nestedcv_surrogate",
     )

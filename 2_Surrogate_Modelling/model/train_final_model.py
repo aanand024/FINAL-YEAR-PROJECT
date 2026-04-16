@@ -10,7 +10,7 @@ It trains the chosen model (XGBoost) on the full dataset, ready to be used in th
 '''
 
 if __name__ == "__main__":
-    CSV_PATH = "surrogate_models/data/LATEST_all_data_merged_for_regression.csv"
+    CSV_PATH = "2_Surrogate_Modelling/data/LATEST_all_data_merged_for_regression.csv"
     df, X_raw, y, emb1_slice, emb2_slice, scalar_slice = load_and_build_raw_features(CSV_PATH)
     preprocessor = make_preprocessor(emb1_slice, emb2_slice, scalar_slice)
 
@@ -24,7 +24,6 @@ if __name__ == "__main__":
         "model__reg_alpha": [0.1],
         "model__reg_lambda": [1.0],
     }
-#   'n_estimators': 500, random_state': 42, 
 
 
     gs, selected_names = final_fit_and_save(

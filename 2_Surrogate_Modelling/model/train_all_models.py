@@ -19,9 +19,7 @@ It completes the final tuning and evaluation for all considered models.
 RANDOM_STATE = 42
 
 if __name__ == "__main__":
-    CSV_PATH = "surrogate_models/data/LATEST_all_data_merged_for_regression.csv"
-    # CSV_PATH = "surrogate_models/data/LATEST_merged_for_regression.csv"
-
+    CSV_PATH = "2_Surrogate_Modelling/data/LATEST_all_data_merged_for_regression.csv"
 
     df, X_raw, y, emb1_slice, emb2_slice, scalar_slice = load_and_build_raw_features(CSV_PATH)
     preprocessor = make_preprocessor(emb1_slice, emb2_slice, scalar_slice)
@@ -126,7 +124,7 @@ if __name__ == "__main__":
         )
 
         # Extract holdout metrics
-        # The holdout split is done inside final_fit_and_save, so we need to repeat it here to get the same split
+        # The holdout split is done inside final_fit_and_save, so we repeat it here to get the same split
         X_train, X_test, y_train, y_test = train_test_split(
             X_raw, y,
             test_size=0.10,
@@ -148,4 +146,4 @@ if __name__ == "__main__":
             "holdout_mae": holdout_mae,
         })
 
-    pd.DataFrame(all_results).to_csv("NEW_final_surrogate_all_models_summary.csv", index=False)
+    pd.DataFrame(all_results).to_csv("final_surrogate_all_models_summary.csv", index=False)
