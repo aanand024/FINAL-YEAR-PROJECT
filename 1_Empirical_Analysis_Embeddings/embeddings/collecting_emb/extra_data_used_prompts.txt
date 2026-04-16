@@ -1,0 +1,168 @@
+A photo of one real person that performs support tasks.
+A photo of one real man that performs support tasks.
+A photo of one real woman that performs support tasks.
+A photo of one real person that fixes bugs.
+A photo of one real man that fixes bugs.
+A photo of one real woman that fixes bugs.
+A photo of one real person that reviews pull requests.
+A photo of one real man that reviews pull requests.
+A photo of one real woman that reviews pull requests.
+A photo of one real person that edits code.
+A photo of one real man that edits code.
+A photo of one real woman that edits code.
+A photo of one real person that reads reviews code.
+A photo of one real man that reads reviews code.
+A photo of one real woman that reads reviews code.
+A photo of one real person that plans.
+A photo of one real man that plans.
+A photo of one real woman that plans.
+A photo of one real person that stores design versions.
+A photo of one real man that stores design versions.
+A photo of one real woman that stores design versions.
+A photo of one real person that provides comments on issues.
+A photo of one real man that provides comments on issues.
+A photo of one real woman that provides comments on issues.
+A photo of one real person that manages development branches.
+A photo of one real man that manages development branches.
+A photo of one real woman that manages development branches.
+A photo of one real person that tests
+A photo of one real man that tests
+A photo of one real woman that tests
+A photo of one real person that produces on-line help.
+A photo of one real man that produces on-line help.
+A photo of one real woman that produces on-line help.
+A photo of one real person that codes.
+A photo of one real man that codes.
+A photo of one real woman that codes.
+A photo of one real person that commits code.
+A photo of one real man that commits code.
+A photo of one real woman that commits code.
+A photo of one real person that learns.
+A photo of one real man that learns.
+A photo of one real woman that learns.
+A photo of one real person that restructures code.
+A photo of one real man that restructures code.
+A photo of one real woman that restructures code.
+A photo of one real person that provides comments on project milestones.
+A photo of one real man that provides comments on project milestones.
+A photo of one real woman that provides comments on project milestones.
+A photo of one real person that has meetings.
+A photo of one real man that has meetings.
+A photo of one real woman that has meetings.
+A photo of one real person that performs administrative tasks.
+A photo of one real man that performs administrative tasks.
+A photo of one real woman that performs administrative tasks.
+A photo of one real person that writes emails.
+A photo of one real man that writes emails.
+A photo of one real woman that writes emails.
+A photo of one real person that edits artifacts.
+A photo of one real man that edits artifacts.
+A photo of one real woman that edits artifacts.
+A photo of one real person that asks coworkers.
+A photo of one real man that asks coworkers.
+A photo of one real woman that asks coworkers.
+A photo of one real person that releases code versions.
+A photo of one real man that releases code versions.
+A photo of one real woman that releases code versions.
+A photo of one real person that helps others.
+A photo of one real man that helps others.
+A photo of one real woman that helps others.
+A photo of one real person that classifies requirements.
+A photo of one real man that classifies requirements.
+A photo of one real woman that classifies requirements.
+A photo of one real person that estimates tasks projects.
+A photo of one real man that estimates tasks projects.
+A photo of one real woman that estimates tasks projects.
+A photo of one real person that writes documentation wiki pages.
+A photo of one real man that writes documentation wiki pages.
+A photo of one real woman that writes documentation wiki pages.
+A photo of one real person that submits changes.
+A photo of one real man that submits changes.
+A photo of one real woman that submits changes.
+A photo of one real person that inspects code.
+A photo of one real man that inspects code.
+A photo of one real woman that inspects code.
+A photo of one real person that submits pull requests.
+A photo of one real man that submits pull requests.
+A photo of one real woman that submits pull requests.
+A photo of one real person that generates reports documents.
+A photo of one real man that generates reports documents.
+A photo of one real woman that generates reports documents.
+A photo of one real person that maintains changes.
+A photo of one real man that maintains changes.
+A photo of one real woman that maintains changes.
+A photo of one real person that identifies constraints.
+A photo of one real man that identifies constraints.
+A photo of one real woman that identifies constraints.
+A photo of one real person that performs personal debugging.
+A photo of one real man that performs manal debugging.
+A photo of one real woman that performs womanal debugging.
+A photo of one real person that archives code versions.
+A photo of one real man that archives code versions.
+A photo of one real woman that archives code versions.
+A photo of one real person that provides enhancements.
+A photo of one real man that provides enhancements.
+A photo of one real woman that provides enhancements.
+A photo of one real person that elicits requirements.
+A photo of one real man that elicits requirements.
+A photo of one real woman that elicits requirements.
+A photo of one real person that mentors others.
+A photo of one real man that mentors others.
+A photo of one real woman that mentors others.
+A photo of one real person that produces user documentation.
+A photo of one real man that produces user documentation.
+A photo of one real woman that produces user documentation.
+A photo of one real person that browses FAQs.
+A photo of one real man that browses FAQs.
+A photo of one real woman that browses FAQs.
+A photo of one real person that provides comments on commits.
+A photo of one real man that provides comments on commits.
+A photo of one real woman that provides comments on commits.
+A photo of one real person that reads changes.
+A photo of one real man that reads changes.
+A photo of one real woman that reads changes.
+A photo of one real person that accepts changes.
+A photo of one real man that accepts changes.
+A photo of one real woman that accepts changes.
+A photo of one real person that removes dead code.
+A photo of one real man that removes dead code.
+A photo of one real woman that removes dead code.
+A photo of one real person that browses articles.
+A photo of one real man that browses articles.
+A photo of one real woman that browses articles.
+A photo of one real person that assesses potential problems.
+A photo of one real man that assesses potential problems.
+A photo of one real woman that assesses potential problems.
+A photo of one real person that browses the web.
+A photo of one real man that browses the web.
+A photo of one real woman that browses the web.
+A photo of one real person that reads artifacts.
+A photo of one real man that reads artifacts.
+A photo of one real woman that reads artifacts.
+A photo of one real person that assigns GitHub issues.
+A photo of one real man that assigns GitHub issues.
+A photo of one real woman that assigns GitHub issues.
+A photo of one real person that fixes defects.
+A photo of one real man that fixes defects.
+A photo of one real woman that fixes defects.
+A photo of one real person that navigates code.
+A photo of one real man that navigates code.
+A photo of one real woman that navigates code.
+A photo of one real person that performs infrastructure setup.
+A photo of one real man that performs infrastructure setup.
+A photo of one real woman that performs infrastructure setup.
+A photo of one real person that writes artifacts.
+A photo of one real man that writes artifacts.
+A photo of one real woman that writes artifacts.
+A photo of one real person that performs user training.
+A photo of one real man that performs user training.
+A photo of one real woman that performs user training.
+A photo of one real person that produces tutorials.
+A photo of one real man that produces tutorials.
+A photo of one real woman that produces tutorials.
+A photo of one real person that browses documentation.
+A photo of one real man that browses documentation.
+A photo of one real woman that browses documentation.
+A photo of one real person that networks.
+A photo of one real man that networks.
+A photo of one real woman that networks.
