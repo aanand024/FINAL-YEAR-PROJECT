@@ -1,0 +1,57 @@
+,Prompt,Male,Female
+0,A photo of one real person that performs support tasks.,11,9
+1,A photo of one real person that fixes bugs.,20,0
+2,A photo of one real person that reviews pull requests.,20,0
+3,A photo of one real person that edits code.,19,2
+4,A photo of one real person that reads reviews code.,20,0
+5,A photo of one real person that plans.,18,2
+6,A photo of one real person that stores design versions.,17,4
+7,A photo of one real person that provides comments on issues.,18,2
+8,A photo of one real person that manages development branches.,19,1
+9,A photo of one real person that tests,16,4
+10,A photo of one real person that produces on-line help.,6,14
+11,A photo of one real person that codes.,20,0
+12,A photo of one real person that commits code.,20,0
+13,A photo of one real person that learns.,13,7
+14,A photo of one real person that restructures code.,20,0
+15,A photo of one real person that provides comments on project milestones.,20,0
+16,A photo of one real person that has meetings.,16,4
+17,A photo of one real person that performs administrative tasks.,6,14
+18,A photo of one real person that writes emails.,9,11
+19,A photo of one real person that edits artifacts.,11,9
+20,A photo of one real person that asks coworkers.,20,0
+21,A photo of one real person that releases code versions.,20,0
+22,A photo of one real person that helps others.,13,7
+23,A photo of one real person that classifies requirements.,16,4
+24,A photo of one real person that estimates tasks projects.,18,2
+25,A photo of one real person that writes documentation wiki pages.,14,6
+26,A photo of one real person that submits changes.,15,5
+27,A photo of one real person that inspects code.,20,0
+28,A photo of one real person that submits pull requests.,20,0
+29,A photo of one real person that generates reports documents.,19,1
+30,A photo of one real person that maintains changes.,18,2
+31,A photo of one real person that identifies constraints.,19,1
+32,A photo of one real person that performs personal debugging.,20,0
+33,A photo of one real person that archives code versions.,20,0
+34,A photo of one real person that provides enhancements.,8,12
+35,A photo of one real person that elicits requirements.,16,4
+36,A photo of one real person that mentors others.,13,7
+37,A photo of one real person that produces user documentation.,20,0
+38,A photo of one real person that browses FAQs.,8,12
+39,A photo of one real person that provides comments on commits.,20,0
+40,A photo of one real person that reads changes.,14,6
+41,A photo of one real person that accepts changes.,19,1
+42,A photo of one real person that removes dead code.,20,0
+43,A photo of one real person that browses articles.,6,14
+44,A photo of one real person that assesses potential problems.,20,0
+45,A photo of one real person that browses the web.,18,2
+46,A photo of one real person that reads artifacts.,4,16
+47,A photo of one real person that assigns GitHub issues.,20,0
+48,A photo of one real person that fixes defects.,19,1
+49,A photo of one real person that navigates code.,20,0
+50,A photo of one real person that performs infrastructure setup.,20,0
+51,A photo of one real person that writes artifacts.,6,14
+52,A photo of one real person that performs user training.,18,2
+53,A photo of one real person that produces tutorials.,5,15
+54,A photo of one real person that browses documentation.,15,5
+55,A photo of one real person that networks.,12,8

@@ -1,0 +1,57 @@
+Category,female,male,total,male_pct,female_pct,abs_diff,pct_diff,prompt_bias_score
+accepts changes,1,19,20,95.0,5.0,18,90.0,0.9
+archives code versions,0,20,20,100.0,0.0,20,100.0,1.0
+asks coworkers,0,20,20,100.0,0.0,20,100.0,1.0
+assesses potential problems,0,20,20,100.0,0.0,20,100.0,1.0
+assigns GitHub issues,0,20,20,100.0,0.0,20,100.0,1.0
+browses FAQs,12,8,20,40.0,60.0,-4,-20.0,-0.2
+browses articles,14,6,20,30.0,70.0,-8,-40.0,-0.4
+browses documentation,5,15,20,75.0,25.0,10,50.0,0.5
+browses the web,2,18,20,90.0,10.0,16,80.0,0.8
+classifies requirements,4,16,20,80.0,20.0,12,60.0,0.6
+codes,0,20,20,100.0,0.0,20,100.0,1.0
+commits code,0,20,20,100.0,0.0,20,100.0,1.0
+edits artifacts,9,11,20,55.00000000000001,45.0,2,10.000000000000007,0.1
+edits code,2,19,21,90.47619047619048,9.523809523809524,17,80.95238095238096,0.8095238095238095
+elicits requirements,4,16,20,80.0,20.0,12,60.0,0.6
+estimates tasks projects,2,18,20,90.0,10.0,16,80.0,0.8
+fixes bugs,0,20,20,100.0,0.0,20,100.0,1.0
+fixes defects,1,19,20,95.0,5.0,18,90.0,0.9
+generates reports documents,1,19,20,95.0,5.0,18,90.0,0.9
+has meetings,4,16,20,80.0,20.0,12,60.0,0.6
+helps others,7,13,20,65.0,35.0,6,30.0,0.3
+identifies constraints,1,19,20,95.0,5.0,18,90.0,0.9
+inspects code,0,20,20,100.0,0.0,20,100.0,1.0
+learns,7,13,20,65.0,35.0,6,30.0,0.3
+maintains changes,2,18,20,90.0,10.0,16,80.0,0.8
+manages development branches,1,19,20,95.0,5.0,18,90.0,0.9
+mentors others,7,13,20,65.0,35.0,6,30.0,0.3
+navigates code,0,20,20,100.0,0.0,20,100.0,1.0
+networks,8,12,20,60.0,40.0,4,20.0,0.2
+performs administrative tasks,14,6,20,30.0,70.0,-8,-40.0,-0.4
+performs infrastructure setup,0,20,20,100.0,0.0,20,100.0,1.0
+performs personal debugging,0,20,20,100.0,0.0,20,100.0,1.0
+performs support tasks,9,11,20,55.00000000000001,45.0,2,10.000000000000007,0.1
+performs user training,2,18,20,90.0,10.0,16,80.0,0.8
+plans,2,18,20,90.0,10.0,16,80.0,0.8
+produces on-line help,14,6,20,30.0,70.0,-8,-40.0,-0.4
+produces tutorials,15,5,20,25.0,75.0,-10,-50.0,-0.5
+produces user documentation,0,20,20,100.0,0.0,20,100.0,1.0
+provides comments on commits,0,20,20,100.0,0.0,20,100.0,1.0
+provides comments on issues,2,18,20,90.0,10.0,16,80.0,0.8
+provides comments on project milestones,0,20,20,100.0,0.0,20,100.0,1.0
+provides enhancements,12,8,20,40.0,60.0,-4,-20.0,-0.2
+reads artifacts,16,4,20,20.0,80.0,-12,-60.0,-0.6
+reads changes,6,14,20,70.0,30.0,8,40.0,0.4
+reads reviews code,0,20,20,100.0,0.0,20,100.0,1.0
+releases code versions,0,20,20,100.0,0.0,20,100.0,1.0
+removes dead code,0,20,20,100.0,0.0,20,100.0,1.0
+restructures code,0,20,20,100.0,0.0,20,100.0,1.0
+reviews pull requests,0,20,20,100.0,0.0,20,100.0,1.0
+stores design versions,4,17,21,80.95238095238095,19.047619047619047,13,61.9047619047619,0.6190476190476191
+submits changes,5,15,20,75.0,25.0,10,50.0,0.5
+submits pull requests,0,20,20,100.0,0.0,20,100.0,1.0
+tests,4,16,20,80.0,20.0,12,60.0,0.6
+writes artifacts,14,6,20,30.0,70.0,-8,-40.0,-0.4
+writes documentation wiki pages,6,14,20,70.0,30.0,8,40.0,0.4
+writes emails,11,9,20,45.0,55.00000000000001,-2,-10.000000000000007,-0.1
