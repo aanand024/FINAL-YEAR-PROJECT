@@ -112,7 +112,7 @@ def predict_bias_for_prompt(prompt: str, individual, xgb_pipe):
 
 def expand_individual_with_zeros(individual, target_width=4096, used_width=2048):
     """
-    Padding Solution: Append zeros to the 2048 individual to make it 4096
+    Padding: Append zeros to the 2048 individual to make it 4096
     """
     individual = np.array(individual, dtype=np.float32)
 
@@ -180,7 +180,7 @@ def generate_image_for_prompt(prompt: str, individual, output_path: str, mode):
 
     image.save(output_path)
 
-def load_best_individuals(csv_path="3_Bias_Mitigation/moea/optimal_solutions_from_results.csv"):
+def load_best_individuals(csv_path):
     all_individuals = []
     with open(csv_path, newline="") as csvfile:
         reader = csv.DictReader(csvfile)
@@ -190,7 +190,7 @@ def load_best_individuals(csv_path="3_Bias_Mitigation/moea/optimal_solutions_fro
     return all_individuals
 
 
-def load_prompts(csv_path="3_Bias_Mitigation/moea/neutral_prompts.csv"):
+def load_prompts(csv_path):
     prompts = []
     with open(csv_path, newline="") as csvfile:
         reader = csv.reader(csvfile)
@@ -209,8 +209,8 @@ def safe_filename(text: str, max_len: int = 100):
 
 
 if __name__ == "__main__":
-    prompts = load_prompts()
-    all_individuals = load_best_individuals()
+    prompts = load_prompts("3_Bias_Mitigation/exp2_scripts/neutral_prompts.csv")
+    all_individuals = load_best_individuals("3_Bias_Mitigation/exp1_results/config3/crossover_0.2_fixed_aggregated_results.csv")
     xgb_pipe = _get_surrogate_model()
 
     print(f"Loaded {len(prompts)} prompts")
