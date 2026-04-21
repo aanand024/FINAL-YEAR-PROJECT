@@ -1,10 +1,13 @@
-# Understanding and Mitigating Gender Bias in Stable Diffusion 3: An Analysis of Embedding-Level Intervention
+# Understanding and Mitigating Gender Bias in Stable Diffusion 3
+## An Analysis of Embedding-Level Intervention
 
-This repository contains the code  developed for FairEmbed, and a UCL BSc Computer Science dissertation. 
+This repository contains the code developed for the project "Understanding and Mitigating Gender Bias in Stable Diffusion 3: An Analysis of Embedding-Level Intervention", a UCL BSc Computer Science dissertation. 
 
-## Research Overview
+## Context Overview
 
-Gender bias in text-to-image (T2I) models manifests when a neutral occupational prompt (e.g. "a photo of a software engineer") consistently generates images skewed toward one gender. This project addresses that bias at the embedding level.
+Gender bias in text-to-image (T2I) models manifests when a neutral occupational prompt (e.g. "a photo of a software engineer") consistently generates images skewed toward one gender. 
+
+This project addresses that bias at the embedding level, analysing gender bias across different stages of the Stable Diffusion 3 (SD3) pipeline from the prompt embeddings, generated images, and the automated tools used to label gender in generated outputs. We develop **FairEmbed**, a surrogate-assisted Genetic Algorithm that optimise embedding-level interventions to mitigate gender bias in SD3.
 
 ---
 
@@ -68,7 +71,7 @@ Contains the implementations and evaluation outputs for automated gender-labelli
 Contains the code and results for the embedding-based analysis of gender bias (RQ1)
 
 - `embeddings/` – raw embeddings, embeddings extraction scripts and cosine-similarity bias scores
-    (Note: `LATEST_rp_updated_embeddings.pkl` contains main prompt embeddings, and `LATEST_extra_data_embeddings.pkl` is for the supplementary data)
+    > **Note:** `LATEST_rp_updated_embeddings.pkl` contains main prompt embeddings, and `LATEST_extra_data_embeddings.pkl` is for the supplementary data.
 - `generated_images/` – labels for generated images, with bias analysis and scores for output images
 - `ground_truth/` – ground-truth label analysis and gender stats
 - `embeddings_analysis.ipynb` - contains code for the plots used in the report for the embedding analysis results 
