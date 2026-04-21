@@ -4,7 +4,7 @@ from tqdm import tqdm
 from pipeline_classes import Pipeline
 import numpy as np
 
-# Initialize all pipelines
+# Initialise all pipelines
 pipelines = [
     Pipeline(),
 ]
@@ -31,13 +31,10 @@ for i, pipeline in enumerate(pipelines):
             if file.lower().endswith(('.png', '.jpg', '.jpeg')):
                 image_paths.append(os.path.join(root, file))
 
-    # Use tqdm to show progress for each pipeline
     for image_path in tqdm(image_paths, desc=f"Processing Pipeline {i+7}"):
         try:
             # Run the pipeline on the image
             predicted_gender, confidence, probs = pipeline.process(image_path)
-            
-            # Handle NoneType results gracefully
             if predicted_gender is None or confidence is None or probs is None:
                 raise ValueError("Pipeline returned None for one of the outputs")
             

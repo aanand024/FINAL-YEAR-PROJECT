@@ -19,7 +19,7 @@ def map_label(label):
 
 df["parsed_gender"] = df["Predicted Label"].apply(map_label)
 
-# Images that were not labelled CHECK
+# Images that were not labelled (if it thinks likely object than a person we skip these)
 new_unlabelled = [
     "sd3_label_image/fighting/fighting_17.png",
     "sd3_label_image/cleaner/cleaner_2.png",

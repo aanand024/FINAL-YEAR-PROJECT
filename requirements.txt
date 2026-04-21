@@ -1,0 +1,35 @@
+# Deep learning (versions from separate GPU environment — pin when known)
+torch>=2.0.0
+torchvision>=0.15.0
+accelerate>=1.0.0
+diffusers>=0.20.0
+transformers>=4.40.0
+safetensors>=0.4.0
+huggingface-hub>=0.20.0
+
+# Computer vision
+Pillow==12.1.1
+opencv-python>=4.8.0
+mediapipe>=0.10.0
+
+# Machine learning
+scikit-learn==1.8.0
+catboost==1.2.10
+lightgbm>=4.0.0
+xgboost>=2.0.0
+joblib==1.5.3
+scipy==1.17.1
+
+# Evolutionary algorithms
+deap>=1.4.0
+
+# Data & plotting
+numpy==2.4.2
+pandas==3.0.1
+matplotlib==3.10.8
+seaborn>=0.13.0
+plotly==6.5.2
+
+# Utilities
+tqdm>=4.66.0
+requests>=2.31.0

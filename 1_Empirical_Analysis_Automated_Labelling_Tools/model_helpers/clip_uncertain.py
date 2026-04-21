@@ -43,8 +43,6 @@ for image_path in tqdm(image_paths, desc="Processing images"):
         print(f"Skipped (not a person): {image_path}")
         continue
 
-
-
     inputs = processor(text=gender_labels, images=image, return_tensors="pt", padding=True).to(device)
 
 
@@ -68,6 +66,5 @@ for image_path in tqdm(image_paths, desc="Processing images"):
     })
 
 df = pd.DataFrame(results)
-df.to_csv("2222prediction_results_filter.csv", index=False)
+df.to_csv("clip_unc_resutls.csv", index=False)
 
-print("Results saved to prediction_results_filter.csv")

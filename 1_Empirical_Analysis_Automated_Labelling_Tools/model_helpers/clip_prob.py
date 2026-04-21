@@ -66,8 +66,8 @@ for image_path in tqdm(image_paths, desc="Processing images"):
         print('u')
 
 df = pd.DataFrame(results)
-df.to_csv("UPDATED_clip_prob_results.csv", index=False)
+df.to_csv("clip_prob_results.csv", index=False)
 df_skipped = pd.DataFrame(skipped)
-df_skipped.to_csv("skipped_images.csv", index=False)
+df_skipped.to_csv("clip_prob_skipped_images.csv", index=False)
 
-print("updated Results saved to prediction_results_90.csv")
+print("Results saved for CLIP-Prob.")

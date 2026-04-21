@@ -7,16 +7,9 @@ from transformers import Blip2Processor, Blip2ForConditionalGeneration, BlipForQ
 
 def main():
     # device = "mps" if torch.backends.mps.is_available() else "cpu"
-    device = "cpu"
-    
-    # processor = BlipProcessor.from_pretrained("Salesforce/blip-vqa-base")
-    # model = BlipForQuestionAnswering.from_pretrained("Salesforce/blip-vqa-base")
-
-
+    device = "cpu"    
     processor = Blip2Processor.from_pretrained("Salesforce/blip2-opt-2.7b")
     model = Blip2ForConditionalGeneration.from_pretrained("Salesforce/blip2-opt-2.7b")
-
-
     model.to(device)
     model.eval()
 
@@ -33,13 +26,10 @@ def main():
                 inputs = processor(image, prompt, return_tensors="pt").to(device)
                 out = model.generate(**inputs)
                 answer = processor.decode(out[0], skip_special_tokens=True).strip()
-                # with torch.no_grad():
-                #     out = model.generate(**inputs, max_new_tokens=10)
-                # answer = processor.decode(out[0], skip_special_tokens=True)
                 results.append((path, answer))
                 print(path, "->", answer)
 
-    with open("results_sd3_labelled.csv", "w", newline="") as f:
+    with open("blip2_results.csv", "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerow(["Image Path", "Output"])
         writer.writerows(results)
