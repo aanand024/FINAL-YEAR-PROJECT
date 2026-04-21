@@ -257,17 +257,18 @@ if __name__ == "__main__":
                     "image_path": "",
                 })
 
-    with open(f"mutated_prompt_results_{DIRECTORY_NAME}.csv", "w", newline="") as csvfile:
-        writer = csv.writer(csvfile)
-        writer.writerow(["prompt", "run", "individual_id", "individual", "gender_bias", "image_path"])
-        for res in results:
-            writer.writerow([
-                res["prompt"],
-                res["run"],
-                res["individual_id"],
-                res["individual"],
-                res["gender_bias"],
-                res["image_path"],
-            ])
+    # Optional, if you wish to save results to CSV for bookeeping (currently only images are generated)
+    # with open(f"mutated_prompt_results_{DIRECTORY_NAME}.csv", "w", newline="") as csvfile:
+    #     writer = csv.writer(csvfile)
+    #     writer.writerow(["prompt", "run", "individual_id", "individual", "gender_bias", "image_path"])
+    #     for res in results:
+    #         writer.writerow([
+    #             res["prompt"],
+    #             res["run"],
+    #             res["individual_id"],
+    #             res["individual"],
+    #             res["gender_bias"],
+    #             res["image_path"],
+    #         ])
 
-    print("Saved results to mutated_prompt_results.csv")
+    # print("Saved results to mutated_prompt_results.csv")
