@@ -1,5 +1,4 @@
-# Understanding and Mitigating Gender Bias in Stable Diffusion 3
-## An Analysis of Embedding-Level Intervention
+# Understanding and Mitigating Gender Bias in Stable Diffusion 3: An Analysis of Embedding-Level Intervention
 
 This repository contains the code developed for the project "Understanding and Mitigating Gender Bias in Stable Diffusion 3: An Analysis of Embedding-Level Intervention", a UCL BSc Computer Science dissertation. 
 
