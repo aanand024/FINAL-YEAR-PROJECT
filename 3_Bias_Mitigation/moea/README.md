@@ -1,4 +1,4 @@
-# Bias Mitigation via Genetic Algorithm (GA) on Prompt Embeddings
+# Bias Mitigation: FairEmbed
 
 This folder contains the source code for FairEmbed. FairEmbed is a surrogate-assissted GA algorithm that optimises the prompt embeddings of Stable Diffusion 3 to minimise gender bias. It utilises a pre-trained XGBoost surrgoate model (`LATEST_final_xgb_full_data_pipeline.joblib`).
 
