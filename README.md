@@ -2,6 +2,13 @@
 
 This repository contains the code developed for the project "Understanding and Mitigating Gender Bias in Stable Diffusion 3: An Analysis of Embedding-Level Intervention", a UCL BSc Computer Science dissertation. 
 
+## Contents
+- [Content Overview](#context-overview)
+- [Repository Structure](#repository-structure)
+- [Setup](#setup)
+- [Data Notes](#data-notes)
+
+
 ## Context Overview
 
 Gender bias in text-to-image (T2I) models manifests when a neutral occupational prompt (e.g. "a photo of a software engineer") consistently generates images skewed toward one gender. 
@@ -10,7 +17,7 @@ This project addresses that bias at the embedding level, analysing gender bias a
 
 ---
 
-## Project Structure
+## Repository Structure
 
 This repository is organised into four folders containing the code for the three main stages of the project:
 
