@@ -1,8 +1,3 @@
-import pandas as pd
-import numpy as np
-import json
-import pickle
-
 '''
 This script is used to extract and save embeddings by category.
 
@@ -10,6 +5,12 @@ For the extra data, use:
 INPUT = '1_Empirical_Analysis_Embeddings/embeddings/raw_data/LATEST_extra_data_embeddings.pkl'
 OUTPUT = 'LATEST_extra_data_all_embeddings_by_category.csv'
 '''
+
+import pandas as pd
+import numpy as np
+import json
+import pickle
+
 
 INPUT = '1_Empirical_Analysis_Embeddings/embeddings/raw_data/LATEST_rp_updated_embeddings.pkl'
 OUTPUT = 'LATEST_all_embeddings_by_category.csv'

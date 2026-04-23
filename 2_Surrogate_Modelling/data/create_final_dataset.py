@@ -1,7 +1,8 @@
-import pandas as pd
 '''
 This Script creates the final dataset for the surrogate models. 
 '''
+
+import pandas as pd
 
 # prompt embeddings - only neutral prompts 'Embedding1_Neutral', 'Embedding2_Neutral'
 embedds = pd.read_csv('surrogate_models/data/LATEST_all_embeddings_by_category.csv')

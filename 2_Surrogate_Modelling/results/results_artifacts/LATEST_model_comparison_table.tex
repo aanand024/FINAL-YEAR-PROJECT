@@ -1,0 +1,18 @@
+\begin{table}
+\caption{Performance of surrogate models on the held-out test set.}
+\label{tab:model_comparison}
+\begin{tabular}{lrrrr}
+\toprule
+Model & CV_R2 & Test_R2 & MAE & MSE \\
+\midrule
+XGBoost & 0.294 & 0.422 & 0.280 & 0.178 \\
+LightGBM & 0.149 & 0.396 & 0.273 & 0.186 \\
+Random Forest & 0.149 & 0.389 & 0.274 & 0.188 \\
+Gradient Boosting & 0.237 & 0.361 & 0.310 & 0.197 \\
+Ridge & 0.194 & 0.336 & 0.330 & 0.205 \\
+CatBoost & 0.247 & 0.312 & 0.261 & 0.212 \\
+SVR & 0.277 & 0.308 & 0.321 & 0.213 \\
+ElasticNet & 0.250 & 0.293 & 0.344 & 0.218 \\
+\bottomrule
+\end{tabular}
+\end{table}

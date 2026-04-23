@@ -1,8 +1,7 @@
-import pandas as pd
-
 '''
 This script  creates extra data dataset for surrogate models.
 '''
+import pandas as pd
 
 # prompt embeddings - only neutral prompts 'Embedding1_Neutral', 'Embedding2_Neutral'
 embedds = pd.read_csv('2_Surrogate_Modelling/data/LATEST_extra_data_all_embeddings_by_category.csv')
