@@ -6,7 +6,7 @@ This repository contains the code developed for the project "Understanding and M
 - [Content Overview](#context-overview)
 - [Repository Structure](#repository-structure)
 - [Setup](#setup)
-- [Data Notes](#data-notes)
+- [Acknowledgements](#acknowledgements)
 
 
 ## Context Overview
@@ -114,11 +114,27 @@ pip install -r requirements.txt
 **Hardware**: Surrogate-based GA runs on CPU. Embedding extraction and image generation are better run on a CUDA-capable GPU.
 
 ---
+## Acknowledgements
+### Data Sources
 
-## Data Notes
-> `extra_data.csv` — supplementary occupational category data; reference: 
-> SD3 images from Lyu et al. are referenced in the report but are not included in this repository. Please see their repository package here: 
-> Raw label outputs per tool are in `labels/`; aligned/cleaned versions are in `labels/cleaned_results/`
+- `extra_data.csv` contains supplementary data extracted from 
+  d'Aloisio et al. (2025). The original dataset is available at:
+  https://github.com/giordanoDaloisio/image-generation-bias
+  Paper: https://arxiv.org/pdf/2501.09014
+
+  - The SD3 images (`sd3_label_image.zip`) forming the main dataset 
+  are from Lyu et al. (2025). 
+  Paper: https://arxiv.org/abs/2501.15775
+
+### Reused and Adapted Code
+The following files were originally developed as part of 
+Lyu et al. (2025) (https://arxiv.org/abs/2501.15775)
+and have been reused or adapted in this project:
+
+- `clip_enhance.py` — reused from the original implementation (as `main.py` in `clip_enhance` folder their code)
+- `clip_prob.py` — adapted from the original implementation (we track skipped images)
+- `clip_uncertain.py` — adapted from the original implementation (we track skipped images)
+- `clip.py` — reused from the original implementation
 
 
 
