@@ -6,7 +6,7 @@ This repository contains the code developed for the project "Understanding and M
 - [Content Overview](#context-overview)
 - [Repository Structure](#repository-structure)
 - [Setup](#setup)
-- [Data Setup](#data-setup)
+- [Datasets Setup](#datasets-setup)
 - [Reproducing Results](#reproducing-results)
 - [Acknowledgements](#acknowledgements)
 
@@ -130,7 +130,7 @@ pip install -r requirements.txt
 
 **Hardware**: Surrogate-based GA runs on CPU. Embedding extraction and image generation are better run on a CUDA-capable GPU.
 
-## Data Setup
+## Datasets Setup
 
 The datasets used in this project are not included in 
 this repository. Please download them from the original 
@@ -143,7 +143,7 @@ sources and place them as follows:
 2. Extract the `sd3_label_image` folder from 
    `annotator/images/sd3_label_image`
 3. Place it in:
-`1_Empirical_Analysis_Automated_Labelling_Tools/model_helpers/` for the automated labelling tool analysis, and move to `1_Empirical_Analysis_Embeddings/generated_images/` when completing the embedding analysis. 
+`1_Empirical_Analysis_Automated_Labelling_Tools/model_helpers/` for the automated labelling tool analysis, and move to `1_Empirical_Analysis_Embeddings/generated_images/` when labelling the images in the embedding analysis. 
 
 
 ### Supplementary dataset (d'Aloisio et al., 2025)
