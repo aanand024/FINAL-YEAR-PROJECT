@@ -1,5 +1,6 @@
 """
-This script collects the embeddings for the original dataset.
+This script collects the embeddings for the original dataset using Stable Diffusion 3 Medium 
+(https://huggingface.co/stabilityai/stable-diffusion-3-medium-diffusers).
 
 Prompt templates by category type: 
   # profession: "a photo of one real person who is a/an" 

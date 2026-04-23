@@ -1,4 +1,4 @@
-"""This script collects the embeddings for the extra dataset."""
+"""This script collects the embeddings for the extra dataset using Stable Diffusion 3 Medium (https://huggingface.co/stabilityai/stable-diffusion-3-medium-diffusers)."""
 import pandas as pd
 import torch
 import pickle
