@@ -6,6 +6,7 @@ This repository contains the code developed for the project "Understanding and M
 - [Content Overview](#context-overview)
 - [Repository Structure](#repository-structure)
 - [Setup](#setup)
+- [Reproducing Results](#reproducing-results)
 - [Acknowledgements](#acknowledgements)
 
 
@@ -128,6 +129,63 @@ pip install -r requirements.txt
 
 **Hardware**: Surrogate-based GA runs on CPU. Embedding extraction and image generation are better run on a CUDA-capable GPU.
 
+
+## Reproducing Results
+
+Results in the report can be reproduced by running the 
+following files in order. Each stage depends on outputs 
+from the previous one.
+
+### Stage 1: Empirical Analysis (Report Section 4.1)
+
+**RQ1 – Embedding bias analysis:**
+1. Extract embeddings: run scripts in 
+   `1_Empirical_Analysis_Embeddings/embeddings/collecting_emb/`
+2. Compute cosine similaritiy scores between gender variants of prompts:
+   run `bias_calc_embeddings.py`
+3. Label generated images, and compute gender statisitics for them:
+   run `blip_labeller.py` then `bias_calc_generated_img.ipynb`
+4. Compute gender statisitics for ground truh (manual labels):
+   run `bias_calc_ground_truth.ipynb`
+5. Generate RQ1 results (Figures 4.1–4.3, Table 4.1): 
+   run `embeddings_analysis.ipynb`
+
+**RQ2 – Labelling tool comparison:**
+1. Follow the notes above and set up FairFace, MiVOLO, Clip-Enhance according to the authors' instructions.
+2. Run each labelling tool using the helper scripts in 
+   `1_Empirical_Analysis_Automated_Labelling_Tools/model_helpers/`
+   (Ensure the path to the images is correct. Refer again to the authors' instructions on how to use each tool.)
+4. Clean outputs from each tool using the converter scripts in `labels/`
+5. Compute gender stats for each tool, changing the CSV path to the cleaned results obtained in step 4:
+   run `labelling_tools_analysis.ipynb` (Instructions in notebook)
+7. Generate RQ2 results (Figure 4.4, Tables 4.2–4.4, Tables A.4-A.6 in Appendix): 
+   run `calc_gender_stats_tools.ipynb`
+
+### Stage 2: Surrogate Modelling (Report Section 4.2) - RQ3
+
+1. Prepare dataset: run scripts in `2_Surrogate_Modelling/data/`
+    run `extract_emb_by_category.py`, -> `create_extradata_dataset.py` -> `create_final_dataset.py`
+3. Model family comparison - Stage 1 of Surrogate Modelling Pipeline (Table 4.5): 
+   run `evaluate_nested_cv_shufflesplit.py` 
+4. Full model training - Stage 2 of Surrogate Modelling Pipeline (Table 4.5): run `train_all_models.py`
+5. Train final XGBoost for GA - Stage 3 of Surrogate Modelling Pipeline: run `train_final_model.py`
+6. Generate RQ3 results (Figure 4.5, Table 4.5, Table A.7): 
+   run `analyse_model.ipynb`
+
+### Stage 3: Bias Mitigation (Report Section 4.3) - RQ4
+
+1. Run FairEmbed: see separate README in `3_Bias_Mitigation/moea/`
+   run `runs.sh` to help complete the 50 runs
+   Note: Change arguments to `main.py` to test each configuration listed in table 3.3)
+3. RQ4 Experiment 1 results (Statistical tests in Section 4.3.1, Figure 4.6, Table A.8-A.11): in `exp1_results/`
+    run `solution_helper.py` -> `50_runs_helper.py` with the relevant paths to the results you're trying to recreate
+    then use `50_runs_analysis.pynb` 
+4. RQ4 Experiment 2 generalisation (Table 4.6, Figure 4.7, Table A.12-A.13): 
+   run `other_prompts.py` then use `50_runs_analysis.pynb` 
+5. RQ4 Comparison with existing methods analysis (Results in Section 4.3.2, Table 4.7)
+   run `runtime_analysis.py` and use `image_generation_analysis.pynb` 
+   Note: You must first follow steps 1-2 using the parameters specified in the report.
+   
 ---
 ## Acknowledgements
 ### Data Sources
@@ -139,13 +197,16 @@ pip install -r requirements.txt
 
 - The SD3 images (`sd3_label_image.zip`) forming the main dataset 
 are from Lyu et al. (2025). 
-Paper: https://arxiv.org/abs/2501.15775
+Paper: https://doi.org/10.1145/3746027.3755748  
+Replication package: https://figshare.com/articles/software/T2IReplication-ISSTA25/27377649/1
+
 
 ### Reused and Adapted Code
 The following files were originally developed as part of 
 Lyu et al. (2025), "Do Existing Testing Tools Really 
-Uncover Gender Bias in Text-to-Image Models?"  
-(https://doi.org/10.1145/3746027.3755748).  
+Uncover Gender Bias in Text-to-Image Models?" (https://doi.org/10.1145/3746027.3755748).  
+Replication package: https://figshare.com/articles/software/T2IReplication-ISSTA25/27377649/1
+
 These files were obtained from the authors' replication package,
 and has been reused or adapted in this project:
 
