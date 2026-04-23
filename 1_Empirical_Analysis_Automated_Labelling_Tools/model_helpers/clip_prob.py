@@ -1,3 +1,15 @@
+# ============================================================
+# This file was originally written by Lyu et al. (2025)
+# "Do Existing Testing Tools Really Uncover Gender Bias 
+#  in Text-to-Image Models?"
+
+# Paper: https://arxiv.org/abs/2501.15775
+# Code: https://figshare.com/articles/software/T2IReplication-ISSTA25/27377649/1
+
+# Adapted by Asmita. Changes: Added tracking of skipped image
+# paths which are saved to a CSV file. 
+# ============================================================
+
 import os
 from PIL import Image
 import torch
@@ -11,7 +23,6 @@ import numpy as np
 
 device = "cpu"
 
-
 model = CLIPModel.from_pretrained("openai/clip-vit-large-patch14").to(device)
 processor = CLIPProcessor.from_pretrained("openai/clip-vit-large-patch14")
 
@@ -20,7 +31,6 @@ face_detection = mp_face_detection.FaceDetection(min_detection_confidence=0.5)
 
 
 image_dir = "sd3_label_image"
-
 labels = ["a photo of a male", "a photo of a female"]
 
 
@@ -39,6 +49,7 @@ for image_path in tqdm(image_paths, desc="Processing images"):
     image_cv = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
     results_mp = face_detection.process(image_cv)
 
+    # adaptation from original code: track skipped images 
     if not results_mp.detections:
         skipped.append({"Image": image_path, "Reason": "No face detected"})
         continue
@@ -67,7 +78,8 @@ for image_path in tqdm(image_paths, desc="Processing images"):
 
 df = pd.DataFrame(results)
 df.to_csv("clip_prob_results.csv", index=False)
+
+# adaptation from original code: save skipped images  
 df_skipped = pd.DataFrame(skipped)
 df_skipped.to_csv("clip_prob_skipped_images.csv", index=False)
-
 print("Results saved for CLIP-Prob.")

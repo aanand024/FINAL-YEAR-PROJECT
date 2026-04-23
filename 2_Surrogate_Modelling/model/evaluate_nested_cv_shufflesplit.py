@@ -1,3 +1,8 @@
+'''
+This file is responsible for Stage 1 of the surrogate modelling pipeline. 
+It contains the code used in the to compare different modelling families.  
+'''
+
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -25,11 +30,6 @@ from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from lightgbm import LGBMRegressor
 from xgboost import XGBRegressor
 from catboost import CatBoostRegressor
-
-'''
-This file is responsible for Stage 1 of the surrogate modelling pipeline. 
-It contains the code used in the to compare different modelling families.  
-'''
 
 RANDOM_STATE = 42
 np.random.seed(RANDOM_STATE)

@@ -1,11 +1,12 @@
+'''
+This script gathers all optimal solutions from the runs produced by the GA algorithm.
+'''
 import os
 import re
 import csv
 import ast
 import glob
 from typing import List, Tuple, Optional
-
-'''This script gathers all optimal soltuions from the runs produced by the GA algorithm.'''
 
 def parse_results_csv(results_csv_path: str) -> Tuple[List[List[float]], List[float]]:
     with open(results_csv_path, "r", newline="") as f:

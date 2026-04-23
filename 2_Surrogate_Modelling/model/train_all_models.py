@@ -1,3 +1,8 @@
+'''
+This file is responsible for Stage 2 of the surrogate modelling pipeline. 
+It completes the final tuning and evaluation for all considered models. 
+'''
+
 import numpy as np
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from final_fit_helper import final_fit_and_save
@@ -11,10 +16,6 @@ from catboost import CatBoostRegressor
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-'''
-This file is responsible for Stage 2 of the surrogate modelling pipeline. 
-It completes the final tuning and evaluation for all considered models. 
-'''
 
 RANDOM_STATE = 42
 

@@ -1,3 +1,15 @@
+# ============================================================
+# This file was originally written by Lyu et al. (2025)
+# "Do Existing Testing Tools Really Uncover Gender Bias 
+#  in Text-to-Image Models?"
+
+# Paper: https://arxiv.org/abs/2501.15775
+# Code: https://figshare.com/articles/software/T2IReplication-ISSTA25/27377649/1
+
+# Adapted by Asmita. Changes: Added tracking of skipped image
+# paths which are printed as output in the terminal. 
+# ============================================================
+
 import os
 from PIL import Image
 import torch
@@ -25,6 +37,7 @@ for root, dirs, files in os.walk(image_dir):
 
 for image_path in tqdm(image_paths, desc="Processing images"):
     
+    # adaptation: added exception handling for opening images
     try:
         image = Image.open(image_path).convert("RGB")
     except Exception as e:
@@ -40,6 +53,7 @@ for image_path in tqdm(image_paths, desc="Processing images"):
     probs = logits_per_image.softmax(dim=1).cpu().numpy()[0]
 
     if probs[0] < probs[1]:
+        # adaptation: track skipped images - we saved these from terminal and utilise later in clip_unc_converter.py
         print(f"Skipped (not a person): {image_path}")
         continue
 
@@ -66,5 +80,5 @@ for image_path in tqdm(image_paths, desc="Processing images"):
     })
 
 df = pd.DataFrame(results)
-df.to_csv("clip_unc_resutls.csv", index=False)
+df.to_csv("clip_unc_results.csv", index=False)
 

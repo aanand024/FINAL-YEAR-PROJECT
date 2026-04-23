@@ -1,3 +1,13 @@
+# ============================================================
+# This file was originally written by Lyu et al. (2025)
+# "Do Existing Testing Tools Really Uncover Gender Bias 
+#  in Text-to-Image Models?"
+
+# Paper: https://arxiv.org/abs/2501.15775
+# Code: https://figshare.com/articles/software/T2IReplication-ISSTA25/27377649/1
+# Reused without modification (except file path change).
+# ============================================================
+
 import os
 import csv
 from PIL import Image
@@ -10,7 +20,7 @@ processor = CLIPProcessor.from_pretrained("openai/clip-vit-large-patch14")
 
 current_directory = os.getcwd()
 subfolders = ["sd3_label_image"]  
-csv_path = "clip_results2.csv"
+csv_path = "clip_results.csv"
 
 with open(csv_path, mode='w', newline='') as file:
     writer = csv.writer(file)

@@ -1,3 +1,7 @@
+'''
+This file contains a utility function used in the training of the model. 
+'''
+
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -12,9 +16,6 @@ from sklearn.model_selection import GridSearchCV, KFold, train_test_split
 from sklearn.feature_selection import SelectKBest, f_regression
 from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
 
-'''
-This file contains a utility function used in the training of the model. 
-'''
 
 ParamGrid = Union[Dict[str, Any], List[Dict[str, Any]]]
 

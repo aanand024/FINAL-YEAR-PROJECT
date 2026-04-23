@@ -1,13 +1,13 @@
+'''
+This file is responsible for the final stage of the surrogate modelling pipeline. 
+It trains the chosen model (XGBoost) on the full dataset, ready to be used in the GA. 
+'''
+
 from final_fit_helper import final_fit_and_save
 from evaluation_helpers import load_and_build_raw_features, make_preprocessor
 from xgboost import XGBRegressor
 
 RANDOM_STATE = 42
-
-'''
-This file is responsible for the final stage of the surrogate modelling pipeline. 
-It trains the chosen model (XGBoost) on the full dataset, ready to be used in the GA. 
-'''
 
 if __name__ == "__main__":
     CSV_PATH = "2_Surrogate_Modelling/data/LATEST_all_data_merged_for_regression.csv"

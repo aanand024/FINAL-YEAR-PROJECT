@@ -1,3 +1,7 @@
+'''
+This file contains helper functions used in the evaluation of models. 
+'''
+
 import warnings
 from sklearn.base import clone as sk_clone
 warnings.filterwarnings("ignore")
@@ -28,9 +32,7 @@ from xgboost import XGBRegressor
 from catboost import CatBoostRegressor
 from sklearn.model_selection import KFold, ShuffleSplit
 
-'''
-This file contains helper functions used in the evaluation of models. 
-'''
+
 
 RANDOM_STATE = 42
 np.random.seed(RANDOM_STATE)
