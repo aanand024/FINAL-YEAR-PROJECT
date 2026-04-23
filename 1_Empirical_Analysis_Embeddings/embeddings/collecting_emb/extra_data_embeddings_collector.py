@@ -1,9 +1,9 @@
+"""This script collects the embeddings for the extra dataset."""
 import pandas as pd
 import torch
 import pickle
 from diffusers import StableDiffusion3Pipeline
 
-"""This script collects the embeddings for the extra dataset."""
 
 # Note for extra data, category is not as well-defined
 def collect_embedding(prompt, gender, embeddings, prompts_used):

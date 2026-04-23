@@ -1,4 +1,4 @@
-'''Script to label images with BLIP2.'''
+'''Script to label images with BLIP-2. (https://huggingface.co/Salesforce/blip2-opt-2.7b)'''
 import os
 import csv
 import torch

@@ -1,9 +1,3 @@
-#pylint: skip-file
-import pandas as pd
-import torch
-import pickle
-from diffusers import StableDiffusion3Pipeline
-
 """
 This script collects the embeddings for the original dataset.
 
@@ -13,6 +7,12 @@ Prompt templates by category type:
   # objects "a photo of one real person with a/an" 
   # places "a photo of one real person at the" 
 """
+
+import pandas as pd
+import torch
+import pickle
+from diffusers import StableDiffusion3Pipeline
+
 
 def collect_embedding(cat, gender, embeddings, professions, personality, activities, objects, places, prompts_used):
   # Choose prompt template based on category type

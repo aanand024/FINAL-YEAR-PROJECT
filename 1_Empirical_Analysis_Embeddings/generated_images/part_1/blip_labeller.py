@@ -1,13 +1,14 @@
+'''
+This script is used to automatically label the gender of the set of generated images, 
+using Blip (https://huggingface.co/Salesforce/blip-vqa-base). 
+'''
+
 import os
 import csv
 import torch
 from PIL import Image
 from transformers import BlipProcessor, BlipForConditionalGeneration, BlipForQuestionAnswering
 
-'''
-This script is used to automatically label the gender of the set of generated images, 
-using Blip (https://huggingface.co/Salesforce/blip-vqa-base). CITE 
-'''
 
 def main():
     device = "mps" if torch.backends.mps.is_available() else "cpu"

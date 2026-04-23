@@ -1,13 +1,3 @@
-import pandas as pd
-from sklearn.metrics.pairwise import cosine_similarity
-import json, re
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-import pickle
-import os
-import argparse
-
 """
 This script computes cosine similarity between the male, female, and neutral variants of prompt embeddings
 to quantify gender bias in generated images. It the calculates cosine similarities, and outputs a CSV file
@@ -24,6 +14,18 @@ To process a different dataset (e.g., extra data), provide the appropriate input
         --output1 LATEST_extra_data_emb_cosine_simil.csv \
         --output2 LATEST_extra_data_emb_cosine_simil_2.csv
 """
+
+import pandas as pd
+from sklearn.metrics.pairwise import cosine_similarity
+import json, re
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pickle
+import os
+import argparse
+
+
 # Load data 
 parser = argparse.ArgumentParser(description="Compute cosine similarity for bias analysis.")
 parser.add_argument('--input', type=str, default=os.path.join('1_Empirical_Analysis', 'embeddings', 'raw_data', 'LATEST_rp_updated_embeddings.pkl'),
