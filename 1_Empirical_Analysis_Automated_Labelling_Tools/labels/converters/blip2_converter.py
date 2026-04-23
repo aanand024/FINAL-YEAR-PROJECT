@@ -1,3 +1,4 @@
+'''Helper script to clean results from BlIP2.'''
 import pandas as pd
 import re
 

@@ -1,3 +1,4 @@
+'''Helper script to clean results from CLIP-Prob.'''
 import pandas as pd
 df = pd.read_csv("1_Empirical_Analysis_Automated_Labelling_Tools/labels/results/clip_prob_results.csv")
 

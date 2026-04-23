@@ -1,3 +1,4 @@
+'''Helper script to label images with MiVOLO. To be used alongside the other code from the authors of MiVOLO.'''
 import subprocess
 import os
 from glob import glob

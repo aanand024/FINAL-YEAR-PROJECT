@@ -1,10 +1,9 @@
+'''Helper script to clean results from FairFace.'''
 import pandas as pd
 import re
 
 # Load the CSV
 df = pd.read_csv('1_Empirical_Analysis_Automated_Labelling_Tools/labels/results/fairface_results.csv')
-
-# Load all image paths
 all_imgs = pd.read_csv("1_Empirical_Analysis_Automated_Labelling_Tools/labels/converters/sd3_images.csv")["img_path"].tolist()
 
 
@@ -32,7 +31,7 @@ missing_df = pd.DataFrame({
     "gender": ["unlabelled"] * len(missing_imgs)
 })
 
-# Combine and save
+# Combine and save, report images that had multiple faces detected
 out_df = pd.concat([new_df, missing_df], ignore_index=True)
 out_df.to_csv("new_fairface_results_with_unlabelled.csv", index=False)
 

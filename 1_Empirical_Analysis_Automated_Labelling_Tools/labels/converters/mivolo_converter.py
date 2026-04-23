@@ -1,3 +1,4 @@
+'''Helper script to clean results from MiVOLO.'''
 import pandas as pd
 
 df = pd.read_csv("1_Empirical_Analysis_Automated_Labelling_Tools/labels/results/mivolo_results.csv")

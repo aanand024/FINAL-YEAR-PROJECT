@@ -1,3 +1,4 @@
+'''Script to label images with BLIP2.'''
 import os
 import csv
 import torch

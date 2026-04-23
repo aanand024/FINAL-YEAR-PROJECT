@@ -1,3 +1,4 @@
+'''Helper script to clean results from CLIP-Enhance.'''
 import pandas as pd
 
 # Load the results CSV
