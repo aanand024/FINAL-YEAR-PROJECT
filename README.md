@@ -116,7 +116,8 @@ Contains the results and implementation of FairEmbed (RQ4)
 
 - `moea/` – FairEmbed algorithm implementation
 - `exp1_results/` – results from 50-run configuration search experiments
-- `exp2_results/` – results from generalisation experiments on unseen prompts
+- `exp2_results/` – results from generalisation experiments on unseen prompts (includes zips containing generated images from 
+Experiment 2, see Report Section 4.3)
 - `exp2_scripts/` – scripts used for generalisation experiments on unseen prompts
 > **Note:**  There is a seperate README provided for FairEmbed in `moea/`.
 
@@ -204,7 +205,7 @@ from the previous one.
 
 1. Run FairEmbed: see separate README in `3_Bias_Mitigation/moea/`
    run `runs.sh` to help complete the 50 runs
-   Note: Change arguments to `main.py` to test each configuration listed in table 3.3)
+   Note: Change arguments to `main.py` to test each configuration listed in table 3.3
 3. RQ4 Experiment 1 results (Statistical tests in Section 4.3.1, Figure 4.6, Table A.8-A.11): in `exp1_results/`
     run `solution_helper.py` -> `50_runs_helper.py` with the relevant paths to the results you're trying to recreate
     then use `50_runs_analysis.ipynb` 
