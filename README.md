@@ -6,6 +6,7 @@ This repository contains the code developed for the project "Understanding and M
 - [Content Overview](#context-overview)
 - [Repository Structure](#repository-structure)
 - [Setup](#setup)
+- [Data Setup](#data-setup)
 - [Reproducing Results](#reproducing-results)
 - [Acknowledgements](#acknowledgements)
 
@@ -129,12 +130,38 @@ pip install -r requirements.txt
 
 **Hardware**: Surrogate-based GA runs on CPU. Embedding extraction and image generation are better run on a CUDA-capable GPU.
 
+## Data Setup
+
+The datasets used in this project are not included in 
+this repository. Please download them from the original 
+sources and place them as follows:
+
+### Main dataset (Lyu et al., 2025)
+
+1. Download the replication package from: 
+   https://figshare.com/articles/software/T2IReplication-ISSTA25/27377649/1
+2. Extract the `sd3_label_image` folder from 
+   `annotator/images/sd3_label_image`
+3. Place it in:
+`1_Empirical_Analysis_Automated_Labelling_Tools/model_helpers/` for the automated labelling tool analysis, and move to `1_Empirical_Analysis_Embeddings/generated_images/` when completing the embedding analysis. 
+
+
+### Supplementary dataset (d'Aloisio et al., 2025)
+
+1. Download `G_gender_count_3.csv` from:
+   https://github.com/giordanoDaloisio/image-generation-bias/blob/main/analysis/Stats/G_gender_count_3.csv
+2. Place it in:
+   `1_Empirical_Analysis_Embeddings/embeddings/collecting_emb`
+3. Run `prepare_data.py` and ensure the prepared dataset is called `extra_data.csv`.
+   
 
 ## Reproducing Results
 
 Results in the report can be reproduced by running the 
 following files in order. Each stage depends on outputs 
 from the previous one.
+
+> **Note:** All scripts use relative paths. Ensure datasets are placed in the correct folders. 
 
 ### Stage 1: Empirical Analysis (Report Section 4.1)
 
@@ -145,16 +172,17 @@ from the previous one.
    run `bias_calc_embeddings.py`
 3. Label generated images, and compute gender statisitics for them:
    run `blip_labeller.py` then `bias_calc_generated_img.ipynb`
-4. Compute gender statisitics for ground truh (manual labels):
+    > **Note:** Ensure `sd3_label_image/` folder is accessible as a relative path from `blip_labeller.py`.
+5. Compute gender statisitics for ground truth (manual labels):
    run `bias_calc_ground_truth.ipynb`
-5. Generate RQ1 results (Figures 4.1–4.3, Table 4.1): 
+6. Generate RQ1 results (Figures 4.1–4.3, Table 4.1): 
    run `embeddings_analysis.ipynb`
 
 **RQ2 – Labelling tool comparison:**
 1. Follow the notes above and set up FairFace, MiVOLO, Clip-Enhance according to the authors' instructions.
 2. Run each labelling tool using the helper scripts in 
    `1_Empirical_Analysis_Automated_Labelling_Tools/model_helpers/`
-   (Ensure the path to the images is correct. Refer again to the authors' instructions on how to use each tool.)
+   > **Note:** Ensure `sd3_label_image/` folder is accessible as a relative path from each script. Refer again to the authors' instructions on how to use each tool.
 4. Clean outputs from each tool using the converter scripts in `labels/`
 5. Compute gender stats for each tool, changing the CSV path to the cleaned results obtained in step 4:
    run `labelling_tools_analysis.ipynb` (Instructions in notebook)
@@ -195,7 +223,7 @@ from the previous one.
   https://github.com/giordanoDaloisio/image-generation-bias
   Paper: https://arxiv.org/pdf/2501.09014
 
-- The SD3 images (`sd3_label_image.zip`) forming the main dataset 
+- The SD3 images (`sd3_label_image/`) forming the main image dataset 
 are from Lyu et al. (2025) licensed under CC BY 4.0.  
 Paper: https://doi.org/10.1145/3746027.3755748  
 Replication package: https://figshare.com/articles/software/T2IReplication-ISSTA25/27377649/1
