@@ -1,3 +1,9 @@
+"""
+This script runs a GA-based optimisation for bias mitigation experiments. 
+Configures and executes the evolutionary process, logs results, and saves experiment 
+outputs including best individuals, Pareto front, and timing information.
+"""
+
 from gao import GAOptimizer
 from argparse import ArgumentParser
 import os
@@ -11,11 +17,6 @@ import torch
 from gao import pipe  
 
 
-"""
-This script runs a GA-based optimisation for bias mitigation experiments. 
-Configures and executes the evolutionary process, logs results, and saves experiment 
-outputs including best individuals, Pareto front, and timing information.
-"""
 
 
 if __name__ == "__main__":

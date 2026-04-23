@@ -1,3 +1,12 @@
+"""
+This script evaluates and generates images for a set of neutral prompts using the previously optimised
+individuals (solutions) from the GA.  For each prompt, it predicts gender bias, generates mutated images 
+by manipulating prompt embeddings, and saves both the results and generated images for further analysis. 
+
+The script is designed to test the generalisation of bias mitigation strategies across diverse prompts.
+
+Results can be found in 3_Bias_Mitigation/exp2_results.
+"""
 import csv
 import glob
 import os
@@ -9,16 +18,6 @@ import torch
 from sklearn.metrics.pairwise import cosine_similarity
 
 from gao import pipe, _get_surrogate_model, construct_gendered_prompts
-
-"""
-This script evaluates and generates images for a set of neutral prompts using the previously optimised
-individuals (solutions) from the GA.  For each prompt, it predicts gender bias, generates mutated images 
-by manipulating prompt embeddings, and saves both the results and generated images for further analysis. 
-
-The script is designed to test the generalisation of bias mitigation strategies across diverse prompts.
-
-Results can be found in 3_Bias_Mitigation/exp2_results.
-"""
 
 
 # CHANGE the following according to preference:

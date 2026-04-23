@@ -1,3 +1,5 @@
+'''This script computes the runtime analysis of the proposed GA.'''
+
 import os
 import pandas as pd
 import numpy as np

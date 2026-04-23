@@ -1,6 +1,5 @@
-import pandas as pd
-
 '''This script compares each optimal solution's gender bias to the ground truth.'''
+import pandas as pd
 
 INPUT_CSV = "3_Bias_Mitigation/exp1_results/comparison/runtime_comparison_optimal_solutions_from_results.csv"
 OUTPUT_CSV = "3_Bias_Mitigation/exp1_results/comparison/swe_prompt_aggregated_results.csv"

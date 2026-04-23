@@ -1,3 +1,9 @@
+"""
+This file implements the core GA optimiser for bias mitigation using prompt embedding manipulation and a 
+surrogate model. Handles population initialisation, fitness evaluation, crossover, mutation, and optimisation 
+loop, leveraging Stable Diffusion and XGBoost for fitness assessment.
+"""
+
 import calendar
 import copy
 import os
@@ -18,11 +24,7 @@ import joblib
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 
-"""
-This file implements the core GA optimiser for bias mitigation using prompt embedding manipulation and a 
-surrogate model. Handles population initialisation, fitness evaluation, crossover, mutation, and optimisation 
-loop, leveraging Stable Diffusion and XGBoost for fitness assessment.
-"""
+
 
 _XGB_PIPE = None
 
