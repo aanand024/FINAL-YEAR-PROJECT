@@ -180,7 +180,7 @@ from the previous one.
 3. RQ4 Experiment 1 results (Statistical tests in Section 4.3.1, Figure 4.6, Table A.8-A.11): in `exp1_results/`
     run `solution_helper.py` -> `50_runs_helper.py` with the relevant paths to the results you're trying to recreate
     then use `50_runs_analysis.ipynb` 
-4. RQ4 Experiment 2 generalisation (Table 4.6, Figure 4.7, Table A.12-A.13): 
+4. RQ4 Experiment 2 results - Generalisation (Table 4.6, Figure 4.7, Table A.12-A.13): 
    run `other_prompts.py` then use `50_runs_analysis.ipynb` 
 5. RQ4 Comparison with existing methods analysis (Results in Section 4.3.2, Table 4.7)
    run `runtime_analysis.py` and use `image_generation_analysis.ipynb` 
