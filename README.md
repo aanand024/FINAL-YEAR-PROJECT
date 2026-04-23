@@ -196,7 +196,7 @@ from the previous one.
   Paper: https://arxiv.org/pdf/2501.09014
 
 - The SD3 images (`sd3_label_image.zip`) forming the main dataset 
-are from Lyu et al. (2025). 
+are from Lyu et al. (2025) licensed under CC BY 4.0.  
 Paper: https://doi.org/10.1145/3746027.3755748  
 Replication package: https://figshare.com/articles/software/T2IReplication-ISSTA25/27377649/1
 
