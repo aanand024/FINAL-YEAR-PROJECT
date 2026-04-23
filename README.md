@@ -21,10 +21,11 @@ This project addresses that bias at the embedding level, analysing gender bias a
 
 This repository is organised into four folders containing the code for the three main stages of the project:
 
-- **Stage 1 Empirical analysis of automated labelling tools (RQ1)**
-- **Stage 1 Empirical analysis of embeddings (RQ2)**
-- **Stage 2 Surrogate modelling (RQ3)**
-- **Stage 3 Bias Mitigation (RQ4)**
+- **Stage 1 Empirical analysis**
+    - Prompt Embedding-Level Gender Bias (RQ1)
+    - Influence of Automated Labelling Tools on Measured Bias (RQ2)
+- **Stage 2 Surrogate Modelling (to predict bias)** (RQ3)
+- **Stage 3 Bias Mitigation (GA Optimisation)** (RQ4)
 
 
 
@@ -66,7 +67,21 @@ FINAL-YEAR_PROJECT/
 Contains the implementations and evaluation outputs for automated gender-labelling tool experiments, including CLIP (its variants), BLIP-2, MiVOLO, and FairFace (RQ2)
 
 - `model_helpers/` – helper scripts to collect labels from tools
-    > **Note:**  For CLIP-enhance, FairFace, MiVOLO please refer to the original authors package repositories in order to use their tools. For Fairface, `fairface_paths.csv` can be used when running FairFace on dataset.
+    > **Note:** The labelling tool experiments in this project 
+    > reproduce and extend the methodology of Lyu et al. (2025) 
+    > ("Do Existing Testing Tools Really Uncover Gender Bias in 
+    > Text-to-Image Models?", https://arxiv.org/abs/2501.15775).
+    > For CLIP-Enhance, FairFace, and MiVOLO, please refer to 
+    > the original authors' repositories to set up their tools
+    > and for further instructions:
+    > - FairFace: https://github.com/joojs/fairface
+    > - MiVOLO: https://github.com/WildChlamydia/MiVOLO (Note: we use this [model](https://drive.google.com/file/d/11i8pKctxz3wVkDBlWKvhYIh7kpVFXSZ4/view) trained on the IMDB-cleaned dataset.)
+    > - CLIP-Enhance: https://arxiv.org/abs/2501.15775 (the provided `clip_enhance.py` is named as `main.py` in the authors repository)
+    >
+    > `fairface_paths.csv` can be used when running FairFace 
+    > on the dataset.
+    > `runmivolo.py` can be used when running MiVOLO on the dataset.
+    
 - `labels/` – raw and cleaned label outputs, along with converter scripts used to clean them
 - `analysis_results/` – results from the `labelling_tools_analysis` notebook
 - `gender_stats/` – per-category gender distribution statistics for each tool
@@ -122,14 +137,17 @@ pip install -r requirements.txt
   https://github.com/giordanoDaloisio/image-generation-bias
   Paper: https://arxiv.org/pdf/2501.09014
 
-  - The SD3 images (`sd3_label_image.zip`) forming the main dataset 
-  are from Lyu et al. (2025). 
-  Paper: https://arxiv.org/abs/2501.15775
+- The SD3 images (`sd3_label_image.zip`) forming the main dataset 
+are from Lyu et al. (2025). 
+Paper: https://arxiv.org/abs/2501.15775
 
 ### Reused and Adapted Code
 The following files were originally developed as part of 
-Lyu et al. (2025) (https://arxiv.org/abs/2501.15775)
-and have been reused or adapted in this project:
+Lyu et al. (2025), "Do Existing Testing Tools Really 
+Uncover Gender Bias in Text-to-Image Models?"  
+(https://doi.org/10.1145/3746027.3755748).  
+These files were obtained from the authors' replication package,
+and has been reused or adapted in this project:
 
 - `clip_enhance.py` — reused from the original implementation (as `main.py` in `clip_enhance` folder their code)
 - `clip_prob.py` — adapted from the original implementation (we track skipped images)
