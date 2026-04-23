@@ -32,7 +32,7 @@ This repository is organised into four folders containing the code for the three
 
 
 ```text
-FINAL-YEAR_PROJECT/
+FINAL-YEAR-PROJECT/
 ├── 1_Empirical_Analysis_Automated_Labelling_Tools/
 │   ├── model_helpers/
 │   ├── labels/
