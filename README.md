@@ -237,7 +237,7 @@ Uncover Gender Bias in Text-to-Image Models?" (https://doi.org/10.1145/3746027.3
 Replication package: https://figshare.com/articles/software/T2IReplication-ISSTA25/27377649/1
 
 These files were obtained from the authors' replication package,
-and has been reused or adapted in this project:
+and have been reused or adapted in this project:
 
 - `clip_enhance.py` — reused from the original implementation (as `main.py` in `clip_enhance` folder their code)
 - `clip_prob.py` — adapted from the original implementation (we track skipped images)
