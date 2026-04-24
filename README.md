@@ -15,7 +15,7 @@ This repository contains the code developed for the project "Understanding and M
 
 Gender bias in text-to-image (T2I) models manifests when a neutral occupational prompt (e.g. "a photo of a software engineer") consistently generates images skewed toward one gender. 
 
-This project addresses that bias at the embedding level, analysing gender bias across different stages of the Stable Diffusion 3 (SD3) pipeline from the prompt embeddings, generated images, and the automated tools used to label gender in generated outputs. We develop **FairEmbed**, a surrogate-assisted Genetic Algorithm that optimise embedding-level interventions to mitigate gender bias in SD3.
+This project addresses that bias at the embedding level, analysing gender bias across different stages of the Stable Diffusion 3 (SD3) pipeline from the prompt embeddings, generated images, and the automated tools used to label gender in generated outputs. We develop **FairEmbed**, a surrogate-assisted Genetic Algorithm that optimises embedding-level interventions to mitigate gender bias in SD3.
 
 ---
 
