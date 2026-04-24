@@ -239,7 +239,7 @@ Replication package: https://figshare.com/articles/software/T2IReplication-ISSTA
 These files were obtained from the authors' replication package,
 and have been reused or adapted in this project:
 
-- `clip_enhance.py` — reused from the original implementation (as `main.py` in `clip_enhance` folder their code)
+- `clip_enhance.py` — reused from the original implementation (named as `main.py` in  the `clip_enhance` folder int their code)
 - `clip_prob.py` — adapted from the original implementation (we track skipped images)
 - `clip_uncertain.py` — adapted from the original implementation (we track skipped images)
 - `clip.py` — reused from the original implementation
