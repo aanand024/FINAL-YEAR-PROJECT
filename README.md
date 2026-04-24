@@ -221,15 +221,16 @@ from the previous one.
 ## Acknowledgements
 ### Data Sources
 
-- `extra_data.csv` contains supplementary data extracted from 
-  d'Aloisio et al. (2025). The original dataset is available at:
+- `extra_data.csv` is the supplementary data extracted from 
+  d'Aloisio et al. (2025). This dataset should be downloaded from:
   https://github.com/giordanoDaloisio/image-generation-bias
   Paper: https://arxiv.org/pdf/2501.09014
 
 - The SD3 images (`sd3_label_image/`) forming the main image dataset 
-are from Lyu et al. (2025) licensed under CC BY 4.0.  
+are from Lyu et al. (2025) licensed under CC BY 4.0. This dataset should be downloaded from:
+https://figshare.com/articles/software/T2IReplication-ISSTA25/27377649/1
 Paper: https://doi.org/10.1145/3746027.3755748  
-Replication package: https://figshare.com/articles/software/T2IReplication-ISSTA25/27377649/1
+
 
 
 ### Reused and Adapted Code
