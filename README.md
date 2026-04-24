@@ -170,50 +170,52 @@ from the previous one.
 1. Extract embeddings: run scripts in 
    `1_Empirical_Analysis_Embeddings/embeddings/collecting_emb/`
 2. Compute cosine similaritiy scores between gender variants of prompts:
-   run `bias_calc_embeddings.py`
+    > Run `bias_calc_embeddings.py`
 3. Label generated images, and compute gender statisitics for them:
-   run `blip_labeller.py` then `bias_calc_generated_img.ipynb`
+    > Run `blip_labeller.py` then `bias_calc_generated_img.ipynb`
+    
     > **Note:** Ensure `sd3_label_image/` folder is accessible as a relative path from `blip_labeller.py`.
-5. Compute gender statisitics for ground truth (manual labels):
-   run `bias_calc_ground_truth.ipynb`
-6. Generate RQ1 results (Figures 4.1–4.3, Table 4.1): 
-   run `embeddings_analysis.ipynb`
+4. Compute gender statistics for ground truth (manual labels):
+    > Run `bias_calc_ground_truth.ipynb`
+5. Generate RQ1 results (Figures 4.1–4.3, Table 4.1): 
+    > Run `embeddings_analysis.ipynb`
 
 **RQ2 – Labelling tool comparison:**
 1. Follow the notes above and set up FairFace, MiVOLO, Clip-Enhance according to the authors' instructions.
 2. Run each labelling tool using the helper scripts in 
    `1_Empirical_Analysis_Automated_Labelling_Tools/model_helpers/`
    > **Note:** Ensure `sd3_label_image/` folder is accessible as a relative path from each script. Refer again to the authors' instructions on how to use each tool.
-4. Clean outputs from each tool using the converter scripts in `labels/`
-5. Compute gender stats for each tool, changing the CSV path to the cleaned results obtained in step 4:
-   run `labelling_tools_analysis.ipynb` (Instructions in notebook)
-7. Generate RQ2 results (Figure 4.4, Tables 4.2–4.4, Tables A.4-A.6 in Appendix): 
-   run `calc_gender_stats_tools.ipynb`
+3. Clean outputs from each tool using the converter scripts in `labels/`
+4. Compute gender stats for each tool, changing the CSV path to the cleaned results obtained in step 4:
+    > Run `labelling_tools_analysis.ipynb` (Instructions in notebook)
+5. Generate RQ2 results (Figure 4.4, Tables 4.2–4.4, Tables A.4-A.6 in Appendix): 
+    > Run `calc_gender_stats_tools.ipynb`
 
 ### Stage 2: Surrogate Modelling (Report Section 4.2) - RQ3
 
 1. Prepare dataset: run scripts in `2_Surrogate_Modelling/data/`
-    run `extract_emb_by_category.py`, -> `create_extradata_dataset.py` -> `create_final_dataset.py`
-3. Model family comparison - Stage 1 of Surrogate Modelling Pipeline (Table 4.5): 
-   run `evaluate_nested_cv_shufflesplit.py` 
-4. Full model training - Stage 2 of Surrogate Modelling Pipeline (Table 4.5): run `train_all_models.py`
-5. Train final XGBoost for GA - Stage 3 of Surrogate Modelling Pipeline: run `train_final_model.py`
-6. Generate RQ3 results (Figure 4.5, Table 4.5, Table A.7): 
-   run `analyse_model.ipynb`
+    > Run `extract_emb_by_category.py`, -> `create_extradata_dataset.py` -> `create_final_dataset.py`
+2. Model family comparison - Stage 1 of Surrogate Modelling Pipeline (Table 4.5): 
+    > Run `evaluate_nested_cv_shufflesplit.py` 
+3. Full model training - Stage 2 of Surrogate Modelling Pipeline (Table 4.5): run `train_all_models.py`
+4. Train final XGBoost for GA - Stage 3 of Surrogate Modelling Pipeline: run `train_final_model.py`
+5. Generate RQ3 results (Figure 4.5, Table 4.5, Table A.7): 
+    > Run `analyse_model.ipynb`
 
 ### Stage 3: Bias Mitigation (Report Section 4.3) - RQ4
 
 1. Run FairEmbed: see separate README in `3_Bias_Mitigation/moea/`
-   run `runs.sh` to help complete the 50 runs
+    > Run `runs.sh` to help complete the 50 runs
    Note: Change arguments to `main.py` to test each configuration listed in table 3.3
-3. RQ4 Experiment 1 results (Statistical tests in Section 4.3.1, Figure 4.6, Table A.8-A.11): in `exp1_results/`
-    run `solution_helper.py` -> `50_runs_helper.py` with the relevant paths to the results you're trying to recreate
+2. RQ4 Experiment 1 results (Statistical tests in Section 4.3.1, Figure 4.6, Table A.8-A.11): in `exp1_results/`
+    > Run `solution_helper.py` -> `50_runs_helper.py` with the relevant paths to the results you're trying to recreate
     then use `50_runs_analysis.ipynb` 
-4. RQ4 Experiment 2 results - Generalisation (Table 4.6, Figure 4.7, Table A.12-A.13): 
-   run `other_prompts.py` then use `50_runs_analysis.ipynb` 
-5. RQ4 Comparison with existing methods analysis (Results in Section 4.3.2, Table 4.7)
-   run `runtime_analysis.py` and use `image_generation_analysis.ipynb` 
-   Note: You must first follow steps 1-2 using the parameters specified in the report.
+3. RQ4 Experiment 2 results - Generalisation (Table 4.6, Figure 4.7, Table A.12-A.13): 
+    > Run `other_prompts.py` then use `50_runs_analysis.ipynb` 
+4. RQ4 Comparison with existing methods analysis (Results in Section 4.3.2, Table 4.7)
+    > Run `runtime_analysis.py` and use `image_generation_analysis.ipynb`
+    
+    > Note: You must first follow steps 1-2 using the parameters specified in the report.
    
 ---
 ## Acknowledgements
