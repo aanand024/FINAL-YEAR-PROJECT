@@ -6,7 +6,7 @@
 # Paper: https://arxiv.org/abs/2501.15775
 # Code: https://figshare.com/articles/software/T2IReplication-ISSTA25/27377649/1
 
-# Adapted by Asmita. Changes: Added tracking of skipped image
+# Adapted. Changes: Added tracking of skipped image
 # paths which are saved to a CSV file. 
 # ============================================================
 
