@@ -1,4 +1,4 @@
-# Deep learning (versions from separate GPU environment — pin when known)
+# Deep learning
 torch>=2.0.0
 torchvision>=0.15.0
 accelerate>=1.0.0
