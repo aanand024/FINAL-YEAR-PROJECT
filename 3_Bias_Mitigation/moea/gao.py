@@ -73,7 +73,7 @@ def construct_gendered_prompts(prompt):
 
 def collect_embeddings_and_evaluate_fitness(prompt, individual):
     """
-    Function to collect the embeddings for a given prompt and compute the bias fitness and the image quality fitness.
+    Function to collect the embeddings for a given prompt and compute the bias fitness.
 
     1- Collect the embeddings from the prompt
     2- Multiply the prompt embeddings times the individual
@@ -174,12 +174,6 @@ print('!!! JUST BEFORE GAO')
 class GAOptimizer:
     """
     Main class for the genetic optimiser.
-    The population is a list of individuals.
-    Each individual is a list of floats between 0 and 1, of the same length as the prompt embeddings, which is a multiplier of the prompt embeddings.
-    The fitness function evaluates the gender bias using the surrogate model and the image quality using a similarity with the original embeddings.
-
-    TODO: the individual can be a list of float values, each one is a multiplier of a specific part of the prompt embeddings.
-
     """
 
     def __init__(self, attributes={}) -> None:
@@ -205,14 +199,11 @@ class GAOptimizer:
     def eval_fitness(self, individual):
         """
         Function to evaluate the fitness of an individual.
-        It collects the embeddings for a given prompt and compute the gender bias fitness and the image quality fitness.
-        
-        :param self: Descrizione
-        :param individual: Descrizione
         """
 
         self.logger.info(f"Generating Images for: \\n {individual}")
 
+        # Collect prompt embeddings and evaluate gender bias
         gender_bias = collect_embeddings_and_evaluate_fitness(self.prompt, individual)
 
         self.logger.info(
@@ -247,9 +238,6 @@ class GAOptimizer:
         """
         Function to perform one-point crossover between two parents.
         It creates two children by combining the genes of the parents.
-        
-        :param parent1: the first parent
-        :param parent2: the second parent
         """
         child1 = copy.deepcopy(parent1)
         child2 = copy.deepcopy(parent2)
@@ -265,10 +253,6 @@ class GAOptimizer:
         """
         Function to perform mutation on an individual.
         It randomly changes one gene of the individual with a certain probability.
-        
-        :param individual: the individual to mutate
-        :param mu: the mean of the Gaussian noise
-        :param sigma: the standard deviation of the Gaussian noise
         """
 
         self.logger.info("Performing mutation")
